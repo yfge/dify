@@ -37,7 +37,7 @@ export type UserProfileOriginResponse = {
   headers: any
 }
 
-export type LangGeniusVersionResponse = {
+export type KattgattVersionResponse = {
   current_version: string
   latest_version: string
   version: string

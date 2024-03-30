@@ -11,7 +11,7 @@ import type {
   IWorkspace,
   InitValidateStatusResponse,
   InvitationResponse,
-  LangGeniusVersionResponse,
+  KattgattVersionResponse,
   Member,
   ModerateResponse,
   OauthResponse,
@@ -67,8 +67,8 @@ export const logout: Fetcher<CommonResponse, { url: string; params: Record<strin
   return get<CommonResponse>(url, params)
 }
 
-export const fetchLanggeniusVersion: Fetcher<LangGeniusVersionResponse, { url: string; params: Record<string, any> }> = ({ url, params }) => {
-  return get<LangGeniusVersionResponse>(url, { params })
+export const fetchKattgattVersion: Fetcher<KattgattVersionResponse, { url: string; params: Record<string, any> }> = ({ url, params }) => {
+  return get<KattgattVersionResponse>(url, { params })
 }
 
 export const oauth: Fetcher<OauthResponse, { url: string; params: Record<string, any> }> = ({ url, params }) => {

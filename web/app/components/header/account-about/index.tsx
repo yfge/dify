@@ -5,12 +5,12 @@ import Link from 'next/link'
 import s from './index.module.css'
 import Modal from '@/app/components/base/modal'
 import { XClose } from '@/app/components/base/icons/src/vender/line/general'
-import type { LangGeniusVersionResponse } from '@/models/common'
+import type { KattgattVersionResponse } from '@/models/common'
 import { IS_CE_EDITION } from '@/config'
 import LogoSite from '@/app/components/base/logo/logo-site'
 
 type IAccountSettingProps = {
-  langeniusVersionInfo: LangGeniusVersionResponse
+  langeniusVersionInfo: KattgattVersionResponse
   onCancel: () => void
 }
 const buttonClassName = `
@@ -38,11 +38,11 @@ export default function AccountAbout({
           <LogoSite className='mx-auto mb-2' />
           <div className='mb-3 text-center text-xs font-normal text-gray-500'>Version {langeniusVersionInfo?.current_version}</div>
           <div className='mb-4 text-center text-xs font-normal text-gray-700'>
-            <div>© 2023 LangGenius, Inc., Contributors.</div>
+            <div>© 2023 KattGatt, Inc., Contributors.</div>
             <div className='text-[#1C64F2]'>
               {
                 IS_CE_EDITION
-                  ? <Link href={'https://github.com/langgenius/dify/blob/main/LICENSE'} target='_blank' rel='noopener noreferrer'>Open Source License</Link>
+                  ? <Link href={'https://github.com/Kattgatt/dify/blob/main/LICENSE'} target='_blank' rel='noopener noreferrer'>Open Source License</Link>
                   : <>
                     <Link href='https://dify.ai/privacy' target='_blank' rel='noopener noreferrer'>Privacy Policy</Link>,
                     <Link href='https://dify.ai/terms' target='_blank' rel='noopener noreferrer'>Terms of Service</Link>
@@ -63,7 +63,7 @@ export default function AccountAbout({
           <div className='flex items-center'>
             <Link
               className={classNames(buttonClassName, 'mr-2')}
-              href={'https://github.com/langgenius/dify/releases'}
+              href={'https://github.com/Kattgatt/dify/releases'}
               target='_blank' rel='noopener noreferrer'
             >
               {t('common.about.changeLog')}
